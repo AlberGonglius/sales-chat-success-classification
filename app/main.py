@@ -3,8 +3,8 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-PIPE = joblib.load('models/prepare.pkl')
-MODEL = joblib.load('models/classify.pkl')
+PIPE = joblib.load('models\prepare.pkl')
+MODEL = joblib.load('models\classify.pkl')
 
 st.markdown("""
          <style>
