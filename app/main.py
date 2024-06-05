@@ -1,10 +1,11 @@
 from prepare_data import match_columns, CustomTransformer
+from pathlib import Path
 import streamlit as st
 import joblib
 import pandas as pd
 
-PIPE = joblib.load('prepare.pkl')
-MODEL = joblib.load('classify.pkl')
+PIPE = Path(__file__).parents[1] / 'prepare.pkl'
+MODEL = Path(__file__).parents[1] / 'classify.pkl'
 
 st.markdown("""
          <style>
