@@ -77,7 +77,7 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
 def match_columns(pipe, data):
     trans_data = pipe.transform(data)
     model_words = []
-    with open('data/model_words.txt', 'r') as file:
+    with open('data\model_words.txt', 'r') as file:
         model_words = file.read().split()
 
     list_of_columns_test = list(trans_data.columns)
