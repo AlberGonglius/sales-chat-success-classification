@@ -4,8 +4,8 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-PIPE = Path(__file__).parents[1] / 'prepare.pkl'
-MODEL = Path(__file__).parents[1] / 'classify.pkl'
+PIPE = joblib.load(Path(__file__).parents[1] / 'prepare.pkl')
+MODEL = joblib.load(Path(__file__).parents[1] / 'classify.pkl')
 
 st.markdown("""
          <style>
